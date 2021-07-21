@@ -1,0 +1,61 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+#corps{  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section h1, h4{
+	text-align: center;
+	color: #F1622A;
+	margin-bottom: 40px;
+	font-weight: bold;
+	font-family: 'Zen Dots', cursive;
+}
+.desc{
+	font-family: 'Zen Dots', cursive;
+	color: white;
+}
+.responsive{
+	border-color: black;
+}
+section p, h2{
+	font-family: 'Zen Dots', cursive;
+	color: white;
+}
+
+#bloc_page {
+	margin: auto;
+}
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}

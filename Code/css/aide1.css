@@ -1,0 +1,252 @@
+body{
+	background-color: #24131B;
+}
+#corps{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#bloc_page {
+	margin: auto;
+}
+#description{
+	box-shadow: 0px 4px 4px black;
+	width: 75%;
+	padding: 30px;
+	margin-top: 20px;
+	font-family: 'Zen Dots', cursive;
+	color: white;
+}
+#section2{
+	border: 1px solid white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 200px 30px 30px 30px;
+	text-align: justify;
+	font-family: 'Zen Dots', cursive;
+}
+#carte{
+	border: black solid 20px;
+}
+#identification{
+	text-align: center;
+}
+#identification a{
+	text-decoration: none;
+	color: white;
+}
+#clegende{
+	width: 250px;
+	height: 300px;
+	color: white;
+}
+#test{
+	font-family: 'Zen Dots', cursive;
+	display: block;
+	border: 1px solid black;
+	box-shadow: 0px 4px 4px black;
+	padding: 30px; 
+	color: white;
+	margin: 30px 30px 30px 30px;
+	text-align: center;
+
+}
+#test a{
+	text-decoration: none;
+	color: white;
+}
+h1{
+	text-align: center;
+	color: #F1622A;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+/*section h1, footer h1, nav a{ 
+font-weight:normal;
+text-transform:uppercase;->titres tjrs en majuscules
+}*/
+header{
+	background: url('images/separateur.png') repeat-x bottom;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+#titre_principal{
+	display: flex;
+	flex-direction: column;
+}
+#logo{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+#logo img{
+	width: 100px;
+	height:100px;
+}
+#logoim img{
+	width: 100px; 
+	height:100px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.aligner {
+	color: white;
+}
+header h2{
+	font-size: 1.1em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+nav ul{
+	list-style: none;/*pour annuler <li>*/
+	display: flex;
+	color: white;
+}
+nav li{
+	margin-right: 10px;
+	color: white;
+}
+nav a{
+	font-size: 1.3em;
+	padding-bottom: 3px;
+	padding-right::12px; 
+	padding-left:12px;
+	text-decoration: none;
+	color: white;
+}
+nav a:hover{
+	color: #F1622A ;
+	border-bottom: 3px solid #760001;
+}
+/*nav ul ul li a:hover{
+	background-color: white;
+	background-size: auto;
+}*/
+nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+ 
+nav ul li:hover ul { 
+z-index:99999;/*détermine l'ordre des différentes couches que formeront les éléments*/
+display:list-item !important;
+position:absolute;
+margin-top:5px;
+margin-left:-10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #24131B;
+padding-left: 8px;
+padding-right: :8px;
+font-size: 11pt;
+color: #F1622A;
+}
+ 
+nav ul li:hover ul li {
+float:none;
+}
+ 
+#tests_image{
+	margin-top: 15px;
+	height:460px;
+	width: 90%;
+	border-radius: 5px;
+	background: url('images/gamers.jpg') no-repeat;
+	box-shadow: 0px 4px 4px black;
+	margin-bottom: 25px;
+	position: relative; 
+}
+#tests_description{
+	 position: absolute;
+    bottom: 25px;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    color: white;
+    font-size: 0.8em;
+}
+.bouton_rouge{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    margin-right: 20px;
+    background-color: #24131B;
+    border: 1px solid #760001;
+    border-radius: 3px;
+    font-size: 1.2em;
+    text-align: center;
+    padding:10px;
+    color: black;
+    text-decoration: none;
+}
+.bouton_rouge img{
+	border: 0;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	background: url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+	padding-top: 25px; 
+	justify-content: space-between;
+
+}
+footer a {
+	color: white;
+}
+footer h1{
+	font-size: 1.1em;
+}
+#partenaires{
+	color: white;
+	width: 25%;
+}
+#membres{
+	color: white;
+	width: 25%;
+}
+#contactez-nous{
+	color: white;
+	width: 25%;
+}
+#mentions{
+	color: white;
+	text-align: center;
+	width: 25%;
+}
+#mentions p{
+color: white;
+font-size: 12pt;
+}
+
+.couleurfaireuntest{
+	color: #F1622A;
+}
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}

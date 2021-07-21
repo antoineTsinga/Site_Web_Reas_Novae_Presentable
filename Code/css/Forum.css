@@ -1,0 +1,249 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+
+#corps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#container{
+    width: 90%;
+    font-family: 'Zen Dots', cursive;
+    background: #f1f1f1;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 40px;
+    transition: all 0.5s ease;
+    padding: 30px;
+}
+
+#container h2{
+    font-size: 22px;
+    padding: 20px;
+
+}
+
+#container hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #F1622A;
+    border: none;
+    margin-bottom: 5%;
+    animation: surligne .5s 1.5s ease-in-out;
+
+}
+
+@keyframes surligne{
+	0%{
+        width: 20%;
+        margin-left: 3%;
+    }
+    50%{
+        width: 0%;
+        margin-left: 23%;
+    }
+    50.01%{
+        width: 0%;
+        margin-left: 3%;
+    }
+    100%{
+        width: 20%;
+        margin-left: 3%;
+    }
+}
+
+#container hr + p{
+	margin-bottom: 3%;
+}
+
+.haut_table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.haut_table .ajouter_sujet{
+    font-family: 'Zen Dots', cursive;
+}
+
+.haut_table #bouton_recherche{
+    font-family: 'Zen Dots', cursive;
+}
+
+#table_sujets{
+    border-collapse: collapse;
+}
+
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+    padding: 10px 5px 10px 5px;
+}
+
+#tete_tableau + td{
+    text-align: center;
+}
+
+.sujets_forum{
+    margin-bottom: 5%;
+}
+
+.container_nouveau_sujet .bouton_question {
+    font-family: 'Zen Dots', cursive;
+    background-color: #f1f1f1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .bouton_question:hover {
+    background-color: midnightblue;
+    color: white;
+}
+
+.bouton_question:after {
+    content: '\25BC';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel form{
+    width: 90%;
+}
+
+#message p{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 5%;
+}
+
+#message label{
+	width: 20%;
+}
+#message input{
+	width: 80%;
+	padding: 5px;
+
+}
+
+#question{
+	width: 80%;
+	height: 200px;
+}
+
+textarea{
+    padding: 5px;
+}
+.envoi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 23%;
+}
+
+#formsend{
+    padding: 10px;
+    font-family: 'Zen Dots', cursive;
+    margin-bottom: 10px;
+    width: 50%;
+
+}
+
+#formsend:hover{
+    border-radius: 3px;
+    background: midnightblue;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  position: absolute;
+
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Zen Dots', cursive;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+  font-family: 'Zen Dots';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }
+}

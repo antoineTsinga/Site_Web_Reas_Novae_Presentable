@@ -1,0 +1,251 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+
+#corps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-family: 'Zen Dots', cursive;
+    background: #f1f1f1;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 40px;
+}
+
+#container h1{
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 25px;
+
+
+}
+#titre_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#image{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100px;
+    height: 100px;
+}
+
+#image div{
+    animation: defilement 3s ease-out;
+}
+#titre_img img{
+    width: 100px;
+    height: 100px;
+
+}
+#container hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 3%;
+    background: #F1622A;
+    border: none;
+    margin-bottom: 2%;
+    animation: surligne .5s 1.5s ease-in-out;
+}
+
+@keyframes surligne{
+    0%{
+        width: 20%;
+        margin-left: 3%;
+    }
+    50%{
+        width: 0%;
+        margin-left: 23%;    
+    }
+    50.01%{
+        width: 0%;
+        margin-left: 3%;
+    }
+    100%{
+        width: 20%;
+        margin-left: 3%;
+    }
+}
+
+#container ul{
+    margin-left: 80px;
+}
+
+#description p{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+}
+.forme{
+    color : green;
+}
+#bouton_test{
+    margin-bottom: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+#bouton_test a {
+    text-decoration: none;
+    font-family: 'Zen Dots', cursive;
+    font-size: 27px;
+    text-align: center;
+    color: #f1f1f1;
+    padding: 10px;
+    background-color: midnightblue;
+    border-radius: 5px;
+    width: 100%;
+    animation: defilement 1s ease-in-out;
+}
+#bouton_test a:hover{
+    opacity: 0.9;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  position: absolute;
+  
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Zen Dots', cursive;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+  font-family: 'Zen Dots';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+@keyframes defilement{
+    0% {
+        width: 0%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    67%{
+        width: 0%;
+        overflow: hidden;
+        white-space: nowrap
+    }
+    100% {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+#tests{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 2%;
+    padding:2%;
+    padding-bottom: 25px;
+
+
+}
+
+#tests figure{
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+
+}
+#tests figure a{
+    text-decoration: none;
+    color: midnightblue;
+
+}
+
+#tests figure img{
+    top: 20px;
+    left: 15%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+#tests figure img:hover {
+    animation: zoom .5s ease-in-out both;
+}
+
+@keyframes zoom{
+    0%{
+        width: 70%;
+
+    }
+    50%{
+        width: 90%;
+        height: 90%;
+        left: 5%;
+    }
+    100%{
+        width: 80%;
+        height: 80%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}

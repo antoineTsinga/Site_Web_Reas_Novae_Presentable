@@ -1,0 +1,188 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+
+#corps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#container{
+    padding: 20px;
+    width: 80%;
+    border: 1px solid black;
+    font-family: 'Zen Dots', cursive;
+    background: #f1f1f1;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#bloc_createur_sujet{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 5%;
+}
+
+.tete{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+h1{
+    font-size: x-large;
+    padding-bottom: 20px;
+}
+
+.texte{
+    padding-top: 2%;
+    margin-left: 30px;
+    margin-right: 30px;
+    word-wrap: break-word;
+}
+
+#container hr {
+    height: 2px;
+    background: #F1622A;
+    border: none;
+    margin-bottom: 5px;
+}
+
+
+#bloc_participant{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+#bloc_participant .tete{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#message_repondu{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    height: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+#message_repondu::after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #f1f1f1 0%, #f1f1f1 0px, transparent);
+}
+
+#message_repondu + p{
+    margin-bottom: 5px;
+}
+
+.bloc_reponse {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.lien_reponse{
+    align-self: flex-start;
+}
+#message p{
+	display: flex;
+	flex-direction: row;
+}
+
+#repac_message_rep{
+    font-size: 0.8em;
+}
+
+textarea{
+    width: 70%;
+    padding: 5px;
+    margin-left: 5%;
+}
+.envoi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 14.5%;
+    margin-right: 15%;
+    padding-top: 20px ;
+}
+
+#formsend{
+    padding: 10px;
+    font-family: 'Zen Dots', cursive;
+    margin-bottom: 10px;
+    width: 30%;
+
+}
+
+#formsend:hover{
+    border-radius: 3px;
+    background: midnightblue;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+#repac_message_rep{
+    margin-left: 14.5%;
+    padding: 20px;
+    width: 70%;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+
+
+}
+
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }
+}

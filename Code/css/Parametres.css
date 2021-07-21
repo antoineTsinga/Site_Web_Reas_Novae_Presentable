@@ -1,0 +1,152 @@
+body{
+	background: url('images/fond_jaune.png');
+}
+#bloc_page {
+	width: 900px;
+	margin: auto;
+}
+/*section h1, footer h1, nav a{ 
+font-weight:normal;
+text-transform:uppercase;->titres tjrs en majuscules
+}*/
+header{
+	background: url('images/separateur.png') repeat-x bottom;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+#titre_principal{
+	display: flex;
+	flex-direction: column;
+}
+#logo{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+#logo img{
+	width: 100px;
+	height:100px;
+}
+#logoim img{
+	width: 100px; 
+	height:100px;
+}
+header h2{
+	font-size: 1.1em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+nav ul{
+	list-style: none;/*pour annuler <li>*/
+	display: flex;
+	color: black;
+}
+nav li{
+	margin-right: 10px;
+	color: black;
+}
+nav a{
+	font-size: 1.3em;
+	padding-bottom: 3px;
+	padding-right::12px; 
+	padding-left:12px;
+	text-decoration: none;
+	color: black;
+}
+nav a:hover{
+	color: #760001 ;
+	border-bottom: 3px solid #760001;
+}
+nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+ 
+nav ul li:hover ul { 
+z-index:99999;/*détermine l'ordre des différentes couches que formeront les éléments*/
+display:list-item !important;
+position:absolute;
+margin-top:5px;
+margin-left:-10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background: url('images/fond_jaune.png');
+
+}
+ 
+nav ul li:hover ul li {
+float:none;
+}
+footer{
+	display: flex;
+	background: url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+	padding-top: 25px; 
+}
+footer h1{
+	font-size: 1.1em;
+}
+#partenaires{
+	width: 28%;
+}
+#membres{
+	width:35%;
+}
+#contactez-nous{
+	width: 31%;
+}
+#mentions{
+	width: 31%;
+}
+#mentions p{
+width: 50%;
+font-size: 12pt;
+}
+a:visited{
+	color:black;
+}
+.couleurfaireuntest{
+	color: white;
+}
+.colorconnect{
+	color: #760001;
+}
+.bouton_rouge{
+	height: 25px;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 3px 8px;
+    color: white;
+    text-decoration: none;
+}
+.bouton_rouge img{
+	border: 0;
+}
+.aligner{
+	display: flex;
+	justify-content: space-around;
+}
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}

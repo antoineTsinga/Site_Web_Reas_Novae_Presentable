@@ -1,0 +1,252 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+
+#corps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#container{
+    width: 80%;
+    font-family: 'Zen Dots', cursive;
+    background: #f1f1f1;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+#description{
+	width: 30%;
+	height: 40%;
+	font-size: 13px;
+	margin-right: 5%;
+	padding: 20px;
+	background-color: #24131B;
+	color: white;
+	animation: defile 1s ease-out;
+	overflow: visible;
+	
+}
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  position: absolute;
+  
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Zen Dots', cursive;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+  font-family: 'Zen Dots';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+@keyframes defile{
+	0%{
+        width: 0%;
+        margin-right: 20%;
+        opacity: 0.5;
+        white-space:nowrap;
+        overflow: hidden;
+    }
+
+    100%{
+        width: 30%;
+        margin-right: 5%;
+        opacity: 1;
+        white-space:nowrap;
+        overflow: hidden;
+
+    }
+}
+
+
+
+#description .info{
+	padding-bottom: 5%;
+}
+
+#contact{
+	width: 65%;
+	padding: 20px;
+}
+
+
+#container h2{
+    font-size: 22px;
+    padding: 20px;
+
+}
+
+#container hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 3%;
+    background: #F1622A;
+    border: none;
+    margin-bottom: 5%;
+    animation: surligne .5s 1.5s ease-in-out;
+    
+}
+
+@keyframes surligne{
+	0%{
+        width: 20%;
+        margin-left: 3%;
+    }
+    50%{
+        width: 0%;
+        margin-left: 23%;    
+    }
+    50.01%{
+        width: 0%;
+        margin-left: 3%;
+    }
+    100%{
+        width: 20%;
+        margin-left: 3%;
+    }
+}
+
+#container hr + p{
+	margin-bottom: 3%;
+}
+
+
+
+
+
+
+.info_perso{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin: 5%;
+}
+.info_perso label{
+	width: 30%;
+}
+.info_perso input{
+	width: 40%;
+	padding: 1%;
+
+}
+
+#message p{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 5%;
+}
+
+#message label{
+	width: 20%;
+}
+#message input{
+	width: 80%;
+	padding: 1%;
+
+}
+
+#question{
+	width: 80%;
+	height: 200px;
+}
+
+.hr{
+	align-items: center;
+	display: flex;
+	text-align: center;
+}
+.hr::before, .hr::after{
+	border-top: 1px solid;
+	content: "";
+	margin: 3px;
+	width: 20%;
+}
+
+.envoi{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 23%;
+}
+
+#formsend{
+    padding: 10px;
+    font-family: 'Zen Dots', cursive;
+    margin-bottom: 10px;
+    width: 50%;
+
+}
+
+#formsend:hover{
+    border-radius: 3px;
+    background: midnightblue;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+.etoile_orange{
+	color: #F1622A;
+}
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}

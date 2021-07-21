@@ -1,0 +1,550 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    height: 100vh;
+
+
+}
+#d1 { 
+    display: none;
+    }
+
+#corps{  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#container{
+    width: 85%;
+    font-family: 'Zen Dots', cursive;
+    background: #f1f1f1;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#menu_vertical{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 5%;
+    animation: defile 1s ease-out;
+    padding-top: 6%; 
+    padding-left: 20px;
+    background-color: rgba(241,98,42,1);
+}
+
+
+.limenu{
+    position: relative;
+    height: 8%;
+    margin-bottom: 5px;
+    
+}
+
+#menu_vertical a{
+    position: absolute;
+    padding-left: 15px;
+    display:block;
+    padding-bottom: 10px ;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #24131B;
+    font-size: 20px;
+    width: 80%;
+    height: 100%;
+    border-top: 8px solid #24131B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: border-top 0.5s ease;
+    transition: bottom 0.5s ease;
+    bottom: 0px;
+    left: 20px;
+
+}
+
+#menu_vertical a:hover
+{
+    color: white;
+    background-color: #24131B;
+    border-top: 8px solid #F1622A;
+    bottom: 8px;
+
+}
+
+#info_form{
+    margin: 2%;
+}
+
+#container h1{
+    font-size: 22px;
+    margin-bottom: 20
+
+}
+
+#container hr {
+    width: 20%;
+    height: 2px;
+    background: #F1622A;
+    border: none;
+    animation: surligne .5s 1.5s ease-in-out;
+}
+
+
+#info_personnel{
+    margin-bottom: 20px;
+
+}
+
+.items p:not(:target) {display: none}
+.items p:target {display: block}
+
+legend {
+    color: blue;
+}
+
+
+.info_mp input [type="submit"]{
+     position: relative;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+
+#formrecherche {
+    margin: 0;
+    padding: 0;
+    background: url(bg.jpg);
+    background-size: cover;
+    font-family: 'Zen Dots';
+}
+                            /*BLOC de recherche de membre*/
+.box {
+    position: relative;
+    top: 10%;
+    margin-top: 1px; 
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+
+}
+
+input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+
+}
+
+.box input[type="search"] {
+    background: #fff;
+    top: 100px;
+    right: 70px;
+    width: 340px;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+.box input[type="submit"] {
+    position: relative;
+    background: #fff;
+    left: -5px;
+    right: 500px;
+    margin-left: 295px;
+    top: 10px;
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 25px;
+    border-radius: 0 25px 25px 0;
+    background:#ffc107;
+}
+.box input[type="submit"]:hover {
+    background: #ff5722;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 0 25px 25px 0;
+}
+
+
+                            /*Blocs blobals*/
+
+#recapitulatif_info{
+    margin: 40px;
+
+}
+fieldset{
+    padding: 20px;
+}
+
+
+form{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.info_mp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+
+}
+
+fieldset .info_mp label{
+    width: 80%;
+}
+
+fieldset .info_mp input{
+    width: 90%;
+    padding: 5px;
+    padding-right: 400px;
+    margin-right: 40px;
+}
+
+.nomEquipe{
+    width: 50%;
+    padding: 5px;
+    padding-right: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+       display: flex;
+    flex-direction: row;
+
+}
+
+#bouton_sauvegarde{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+fieldset button{
+    width: 40%;
+    padding: 10px;
+}
+
+#formteam {
+     position: relative;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+}
+#formteam a{
+    position: absolute;
+    text-align: center;
+    text-decoration:none;
+    font-size: 18px;
+    padding: 15px;
+    padding-top: 7px;
+    font-family: 'Zen Dots', cursive;
+    width: 40%;
+    background-color: #24131B;
+    color: #f1f1f1;
+    border-radius: 3px;
+    border-top: 8px solid #24131B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: border-top 0.3s ease;
+    transition: bottom 0.3s ease;
+    bottom: 0;
+
+}
+#formteam a:hover{
+    border-top: 8px solid #F1622A;
+    color: #f1f1f1;
+    bottom: 5px;
+}
+
+#selectionPourInscription {
+    flex-direction: row;
+    width: 100%;
+}
+
+#btn_supprime{ /* Inutilisé*/
+    position: relative;
+    margin-top: 5px;
+    display: flex;
+    /*justify-content: flex-end;*/
+    margin-bottom: 20px;
+    width: 90%;
+    height: 40px;
+   
+ }
+
+ #blocEnvoi{ 
+    position: relative;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 60px;
+ }
+
+
+
+/*#btn_supprime a*/
+#blocEnvoi a input[type="submit"] {
+    position: relative;
+    text-align: center;
+    text-decoration:none;
+    font-size: 16px;
+    padding: 15px;
+    margin-left: 310px;
+    padding-top: 7px;
+    font-family: 'Zen Dots', cursive;
+    width: 60%;
+    background-color: #24131B;
+    color: #f1f1f1;
+    border-radius: 3px;
+    border-top: 8px solid #24131B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: border-top 0.3s ease;
+    transition: bottom 0.3s ease;
+    bottom: 0;
+
+}
+
+/*#btn_supprime a:hover*/
+#blocEnvoi a input[type="submit"]:hover {
+    border-top: 8px solid #F1622A;
+    color: #f1f1f1;
+    bottom: 5px;
+}
+
+
+#btn_supprime a {
+    position: relative;
+    text-align: center;
+    text-decoration:none;
+    font-size: 16px;
+    padding: 15px;
+    margin-left: 10px;
+    padding-top: 7px;
+    font-family: 'Zen Dots', cursive;
+    width: 35%;
+    /*background-color: #24131B;*/
+    background-color: #E1E1E1;
+    /*color: #f1f1f1;*/
+    color: black;
+    border-radius: 3px;
+    border-top: 8px solid #24131B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: border-top 0.3s ease;
+    transition: bottom 0.3s ease;
+    bottom: 0;
+
+}
+
+#btn_supprime a:hover{
+    border-top: 8px solid #F1622A;
+    color: #f1f1f1;
+    bottom: 5px;
+}
+
+
+
+
+
+            /* Tableau de recherche */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    
+}
+table td {
+  width: 15%;
+ 
+}
+
+table tr {
+    height: 10px;
+}
+
+
+
+
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  position: absolute;
+  
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Zen Dots', cursive;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+  font-family: 'Zen Dots';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+    
+@keyframes defile{
+    0%{
+        width: 0%;
+        margin-right: 20%;
+        opacity: 0.5;
+        white-space:nowrap;
+        overflow: hidden;
+    }
+
+    100%{
+        width: 25%; 
+        margin-right: 5%;
+        opacity: 1;
+        white-space:nowrap;
+        overflow: hidden;
+
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+    width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+    footer{
+        flex-direction: column;
+ }   
+
+ #menu_vertical{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    margin-right: 5%;
+   align-content: inherit;
+    padding-top: 6%; 
+    padding-left: 10px;
+   
+}
+
+#menu_vertical a{
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 3%;
+    display:inline-block;
+    padding-bottom: 10px ;
+    width: 90%;
+    height: 80px;
+    bottom: 0px;
+    left: 20px;
+    font-size: 18px;
+
+}
+#container{
+    display: flex;
+    flex-direction: column;
+}
+
+.limenu{
+   
+    height: 50%;
+    margin-bottom: 5px;
+    
+}
+
+#blocEnvoi a input[type="submit"] {
+    
+    font-size: 15px;
+    padding: 15px;
+    margin-left: 150px;
+    padding-top: 7px;
+    font-family: 'Zen Dots', cursive;
+    width: 70%;
+    }
+
+    #btn_supprime {
+        display: înline-block;
+        flex-direction: column;
+        text-align: none;
+        padding-bottom: 20px;
+
+    }
+    #selectionPourInscription{
+        height: 200px;
+        padding-bottom: 20px;
+
+    }
+
+    #btn_supprime a {
+        width: 60%;
+        padding-bottom: 20px;
+         margin-bottom: 20px;
+    }
+
+    fieldset .info_mp label{
+    width: 50%;
+}
+
+fieldset .info_mp input{
+    width: 50%;
+    padding: 5px;
+    padding-right: 10px;
+    margin-right: 40px;
+}
+}

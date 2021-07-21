@@ -1,0 +1,154 @@
+body{
+	background-color: #f1f1f1;
+}
+section{
+	font-family: 'Zen Dots', cursive;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+fieldset{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f1f1f1;
+	border: 1px solid black;
+	box-shadow: 0px 4px 4px black;
+}
+
+fieldset div .info_perso{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#case_civilite{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#case_civilite p{
+	margin-right: 80px;
+}
+
+#box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+fieldset input{
+	width: 50%;
+}
+
+#bas_form{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	text-align: center;
+	border: 1px solid black;
+	box-shadow: 0px 4px 4px black;
+}
+
+#bas_form input{
+	padding: 10px;
+
+}
+
+#champ_info_perso{
+	width: 80%;
+
+}
+
+#corps{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#carte{
+	border: black solid 20px;
+}
+#identification{
+	text-align: center;
+}
+#identification a{
+	text-decoration: none;
+	color: white;
+}
+#clegende{
+	width: 250px;
+	height: 300px;
+	color: white;
+}
+
+
+h1{
+	text-align: center;
+	color: #F1622A;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  position: absolute;
+  
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Zen Dots', cursive;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+  font-family: 'Zen Dots';
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1024px){
+#bloc_page{
+	width: auto;
+}
+nav{
+        width: auto;
+        text-align: left;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+	nav li{
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+    nav a{
+        font-size: 1.1em;
+    }
+	footer{
+		flex-direction: column;
+ }   
+}
